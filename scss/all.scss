@@ -66,10 +66,11 @@ img{
 }
 /* 容器 */
 body{
-    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/bg_home.svg"),url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball01.svg");
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/bg_home.svg"),url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball01.svg"),url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball02.svg");
     background-repeat: no-repeat;
-    background-size: 60vw auto,360px 360px;
-    background-position: top right,-222px 400px;
+    background-size: 60vw auto,360px 360px,310px 310px;
+    background-position: top right,-20vw 70vh,78vw 200vh;
+    z-index: -1;
 }
 
 
@@ -108,13 +109,18 @@ body{
 .box{
     &-radius{
         border-radius: 5px;
+        overflow: hidden;
     }
     &-round{
         border-radius: 50%;
     }
     &-shadow{
-        box-shadow: 0px 0px 5px gray;
+        box-shadow: 0px 2px 5px #c3c3c3;
     }
+}
+
+.card{
+    display: block;
 }
 
 /* 元件 */
@@ -123,6 +129,18 @@ h2{
     font-size: $font-size-title;
     font-family: $font-family-title;
     line-height: 1.5;
+    font-weight: bold;
+}
+
+h3{
+    font-size: $font-size-xl;
+    font-family: $font-family-title;
+    font-weight: bold;
+}
+
+h4{
+    font-size: $font-size-l;
+    font-family: $font-family-title;
     font-weight: bold;
 }
 
@@ -138,6 +156,31 @@ h2{
 
 .df{
     display: flex;
+    &-jcc{
+        justify-content: center;
+    }
+    &-jcfs{
+        justify-content: flex-start;
+    }
+    &-jcsb{
+        justify-content: space-between;
+    }
+    &-aic{
+        align-items: center;
+    }
+    &-aife{
+        align-items: flex-end;
+    }
+}
+.fxdc{
+    flex-direction: column;
+}
+.fxww{
+    flex-wrap: wrap;
+}
+
+.ta-c{
+    text-align: center;
 }
 
 .pdx{
@@ -156,6 +199,10 @@ h2{
     &-32{
         padding-left: 32px;
         padding-right: 32px;
+    }
+    &-63{
+        padding-left: 63px;
+        padding-right: 63px;
     }
     &-139{
         padding-left: 139px;
@@ -186,6 +233,12 @@ h2{
     }
 }
 
+.pt{
+    &-260{
+        padding-top: 260px;
+    }
+}
+
 .pb{
     &-8{
         padding-bottom: 8px;
@@ -207,6 +260,39 @@ h2{
     }
 }
 
+.mx{
+    &-4{
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    &-8{
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+    &-24{
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+    &--8{
+        margin-left: -8px;
+        margin-right: -8px;
+    }
+    &--24{
+        margin-left: -24px;
+        margin-right: -24px;
+    }
+    &--48{
+        margin-left: -48px;
+        margin-right: -48px;
+    }
+}
+
+.mxr{
+    &-47{
+        margin-right: 47px;
+    }
+}
+
 .mb{
     &-8{
         margin-bottom: 8px;
@@ -216,6 +302,9 @@ h2{
     }
     &-24{
         margin-bottom: 24px;
+    }
+    &-28{
+        margin-bottom: 28px;
     }
     &-30{
         margin-bottom: 30px;
@@ -231,7 +320,6 @@ h2{
     }
 }
 
-
 .btn{
     display: block;
     border-radius: 20px;
@@ -239,11 +327,11 @@ h2{
     text-align: center;
     padding: 12px 32px;
     &-primary{
-        color: $btn-primary-color;
-        border: 1px solid $btn-primary-color;
+        color: #fff;
+        background: $btn-primary-color;
         &:hover{
             color: #fff;
-            background: $btn-primary-color;
+            background: darken($btn-primary-color,10%);
         }
     }
     &-secondary{
@@ -256,11 +344,122 @@ h2{
     }
 }
 
+.pagination{
+    display: block;
+    border-radius: 50px;
+    text-decoration: none;
+    &-primary{
+        width: 16px;
+        height: 10px;
+        background: #FFD153;
+    }
+    &-secondary{
+        width: 10px;
+        height: 10px;
+        background: #DDDDDD;
+    }
+}
+
+.platform-card{
+    width: 33%;
+    img{
+        width: 36%;
+    }
+    p{
+        color: #747474;
+    }
+}
+
+.area-role{
+    .title{
+        font-size: 20px;
+        font-weight: normal;
+    }
+    .role-card{
+        width: 25%;
+        background-color: #fff;
+        img{
+            width: 100%;
+        }
+        h4{
+            color: $btn-primary-color;
+            font-size: 16px;
+            font-weight: normal;
+        }
+    }
+}
+.area-advantage{
+    .advantage{
+        width: 49%;
+    }
+    .advantage-information{
+        width: 50%;
+        h3{
+            padding-top: 165px;
+            padding-right: 100px;
+            padding-bottom: 16px;
+        }
+        p{
+            padding-bottom: 24px;
+        }
+        a{
+            margin-right: 228px;
+        }
+    }
+}
+.advantage-card{
+    width: 45%;
+    .item{
+        width: 86px;
+        height: 86px;
+        img{
+            width: 52px;
+            height: 52px;
+        }
+    }
+}
+
+.review-card{
+    width: 33%;
+    position: relative;
+    .review-pic{
+        position: absolute;
+        left:32px;
+        img{
+            width: 80px;
+            height: 80px;
+        }
+    }
+    .review-information{
+        width: 100%;
+        margin-top: 56px;
+        .pg{
+            margin-top: 48px;
+            border-bottom: 1px solid #DDDDDD;
+            line-height: 1.3;
+        }
+        h4{
+            padding-top: 24px;
+            font-size: 16px;
+        }
+        .star-rate{
+            img{
+                width: 90%;
+                height: 90%;
+            }
+        }
+    }
+}
+
+.footer-box{
+    background: #F5F5F5;
+}
 
 /* 斷點 */
 @media(max-width:768px){
     body{
-        background-image: none;
+        background-size: 90vw auto,240px 240px,200px 200px;
+        background-position: top right,-20vw 145vh,77vw 370vh;
     }
 
     .navbar{
@@ -274,18 +473,85 @@ h2{
         }
         .banner-r{
             width: 100%;
-            background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/bg_home_sm.svg");
-            background-repeat: no-repeat;
-            background-size: 60vw;
-            background-position: 0 110px;
         }
 
+    }
+    .platform{
+        flex-wrap: wrap;
+        margin: 0 -48px;
+        .platform-card{
+            width: 100%;
+            padding: 0px 48px;
+            img{
+                width: 30%;
+            }
+        }
+    }
+
+    .area-role{
+        margin-bottom: 60px;
+        .role{
+            flex-wrap: wrap;
+            .role-card{
+                width: 46%;
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    .area-advantage{
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-bottom: 36px;
+        .advantage{
+            width: 100%;
+            margin: 0px -12px;
+            .advantage-card{
+                margin: 0px 12px 24px;
+            }
+
+        }
+        .advantage-information{
+            width: 100%;
+            align-items: center;
+            text-align: center;
+            h3{
+                padding: 0 0 16px;
+            }
+            a{
+                margin: 0 0 32px;
+            }
+        }
+    }
+    .area-review{
+        .review{
+            flex-wrap: wrap;
+            .review-card{
+                width: 100%;
+                margin-bottom: 16px;
+            }
+            .review-information{
+                padding: 0px 32px;
+            }
+        }
     }
 }
 
 @media(max-width:375px){
     body{
         background-image: none;
+    }
+
+    h3{
+        font-size: 28px;
+    }
+
+    h4{
+        font-size: $font-size-m;
+    }
+
+    p{
+        font-size: $font-size-s;
     }
 
     .container{
@@ -317,7 +583,50 @@ h2{
             background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/bg_home_sm.svg");
             background-repeat: no-repeat;
             background-size: 80vw ;
-            background-position: 0 100px;
+            background-position: 0 12vh;
+        }
+    }
+
+    .area-platform{
+        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball01.svg");
+        background-repeat: no-repeat;
+        background-size: 126px 126px;
+        background-position: -87px 10px;
+        .platform{
+            margin: 0 -64px;
+            .platform-card{
+                padding: 0px 64px;
+                img{
+                    width: 24%;
+                }
+            }
+        }
+    }
+
+    .area-role{
+        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball02.svg");
+        background-repeat: no-repeat;
+        background-size: 140px 140px;
+        background-position: 78vw 225vh;
+        .title{
+            font-size: 18px;
+        }
+        .role{
+            flex-wrap: wrap;
+            margin: 0 -24px;
+            .role-card{
+                margin: 0px 24px;
+                width: 80%;
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    .area-advantage{
+        .advantage{
+            .advantage-card{
+                width: 100%;
+            }
         }
     }
 }
