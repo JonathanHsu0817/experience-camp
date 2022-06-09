@@ -61,6 +61,7 @@ sub{
 
 *,*::before,*::after{
     box-sizing: border-box;
+    line-height: 1.5;
     font-size: $font-size-s;
     font-family: $font-family-base;
 }
@@ -71,9 +72,9 @@ img{
 }
 /* 容器 */
 body{
-    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/bg_home.svg"),url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball01.svg"),url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball02.svg");
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/banner.svg"),url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball03.svg"),url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball02.svg");
     background-repeat: no-repeat;
-    background-size: 60vw auto,360px 360px,310px 310px;
+    background-size: 65vw auto,360px 360px,310px 310px;
     background-position: top right,-20vw 70vh,78vw 200vh;
     z-index: -1;
 }
@@ -133,7 +134,6 @@ body{
 h2{
     font-size: $font-size-title;
     font-family: $font-family-title;
-    line-height: 1.5;
     font-weight: bold;
 }
 
@@ -163,12 +163,14 @@ h4{
     display: flex;
     &-jcc{
         justify-content: center;
+        align-items: center;
     }
     &-jcfs{
         justify-content: flex-start;
     }
     &-jcsb{
         justify-content: space-between;
+        align-items: center;
     }
     &-aic{
         align-items: center;
@@ -213,12 +215,20 @@ h4{
         padding-left: 139px;
         padding-right: 139px;
     }
+    &-295{
+        padding-left: 295px;
+        padding-right: 295px;
+    }
 }
 
 .pdy{
     &-8{
         padding-top: 8px;
         padding-bottom: 8px;
+    }
+    &-10{
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
     &-16{
         padding-top: 16px;
@@ -239,6 +249,12 @@ h4{
 }
 
 .pt{
+    &-32{
+        padding-top: 32px;
+    }
+    &-92{
+        padding-top: 92px;
+    }
     &-260{
         padding-top: 260px;
     }
@@ -263,6 +279,9 @@ h4{
     &-100{
         padding-bottom: 100px;
     }
+    &-280{
+        padding-bottom: 280px;
+    }
 }
 
 .mx{
@@ -274,6 +293,14 @@ h4{
         margin-left: 8px;
         margin-right: 8px;
     }
+    &-12{
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+    &-16{
+        margin-left: 16px;
+        margin-right: 16px;
+    }
     &-24{
         margin-left: 24px;
         margin-right: 24px;
@@ -281,6 +308,10 @@ h4{
     &--8{
         margin-left: -8px;
         margin-right: -8px;
+    }
+    &--12{
+        margin-left: -12px;
+        margin-right: -12px;
     }
     &--24{
         margin-left: -24px;
@@ -317,7 +348,16 @@ h4{
     &-48{
         margin-bottom: 48px;
     }
+    &-54{
+        margin-bottom: 54px;
+    }
     &-64{
+        margin-bottom: 64px;
+    }
+    &-84{
+        margin-bottom: 84px;
+    }
+    &-92{
         margin-bottom: 64px;
     }
     &-100{
@@ -346,6 +386,11 @@ h4{
             color: #fff;
             background: darken($btn-secondary-color,10%);
         }
+    }
+    &-size{
+        width: 136px;
+        height: 49px;
+        margin: 0 auto 32px;
     }
 }
 
@@ -467,6 +512,84 @@ h4{
     }
 }
 
+.area-project{
+    .project{
+        width: 100%;
+    }
+    .project-selection{
+        width: 100%;
+        .sel-simple{
+            width: 45%;
+            h3{
+                border-bottom: 1px solid #DDDDDD;
+            } 
+        }
+        .sel-standard{
+            width: 45%;
+            h3{
+                border-bottom: 1px solid #DDDDDD;
+            } 
+        }
+        .sel-information{
+            text-align: left;
+            li{
+                margin-bottom: 16px;
+            }
+        }
+    }
+}
+
+.sel-box{
+    line-height: 1.5;
+    font-size: $font-size-s;
+    .sel-num{
+        width: 45%;
+        background: #F5F5F5;
+        span{
+            color: $btn-primary-color;
+            font-size: 29px;
+        }
+        sub{
+            font-size: $font-size-s;
+            line-height: 1;
+        }
+    }
+    .equal{
+        font-size: $font-size-l;
+        font-weight: bold;
+    }
+    .sel-price{
+        width: 45%;
+        background: #F5F5F5;
+        span{
+            font-size: 29px;
+        }
+        sub{
+            font-size: $font-size-s;
+            line-height: 1;
+        }
+    }
+}
+
+.area-qa{
+    .qa{
+        h4{
+            font-size: $font-size-m;
+            font-weight: normal;
+            width: 80%;
+            span{
+                font-weight: bold;
+                color: $btn-primary-color;
+            }
+        }
+    }
+    .select{
+        p{
+            color: #747474;
+        }
+    }
+}
+
 footer{
     background: #F5F5F5;
     .footer-box{
@@ -479,6 +602,7 @@ footer{
     body{
         background-size: 90vw auto,240px 240px,200px 200px;
         background-position: top right,-20vw 145vh,77vw 370vh;
+        z-index: -1;
     }
 
     .navbar{
@@ -553,6 +677,24 @@ footer{
                 padding: 0px 32px;
             }
         }
+    }
+
+    .area-project{
+        margin-bottom: 60px;
+        .project-selection{
+            flex-wrap: wrap;
+            .sel-simple{
+                width: 100%;
+                margin-bottom: 24px;
+            }
+            .sel-standard{
+                background: #fff;
+                width: 100%;
+            }
+        }
+    }
+    .area-qa{
+        margin-bottom: 44px;
     }
 }
 
@@ -653,6 +795,25 @@ footer{
         background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/footer_sm.svg");
         h3{
             font-size: 24px;
+        }
+    }
+
+    .area-intro{
+        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/banner_sm.svg");
+        background-repeat: no-repeat;
+    }
+
+    .area-project{
+        .project{
+            flex-wrap: wrap;
+            justify-content: center;
+            a{
+                font-size: $font-size-s;
+                padding: 8px 16px;
+                width: 105px;
+                height: 40px;
+                margin: 0 3px 6px;
+            }
         }
     }
 }

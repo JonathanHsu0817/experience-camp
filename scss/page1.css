@@ -59,6 +59,7 @@ sub {
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  line-height: 1.5;
   font-size: 16px;
   font-family: Noto Sans TC, Regular;
 }
@@ -70,9 +71,9 @@ img {
 
 /* 容器 */
 body {
-  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/bg_home.svg"), url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball01.svg"), url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball02.svg");
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/banner.svg"), url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball03.svg"), url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball02.svg");
   background-repeat: no-repeat;
-  background-size: 60vw auto,360px 360px,310px 310px;
+  background-size: 65vw auto,360px 360px,310px 310px;
   background-position: top right,-20vw 70vh,78vw 200vh;
   z-index: -1;
 }
@@ -137,7 +138,6 @@ body {
 h2 {
   font-size: 48px;
   font-family: Noto Sans TC, Bold;
-  line-height: 1.5;
   font-weight: bold;
 }
 
@@ -173,6 +173,9 @@ h4 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .df-jcfs {
@@ -185,6 +188,9 @@ h4 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .df-aic {
@@ -245,9 +251,19 @@ h4 {
   padding-right: 139px;
 }
 
+.pdx-295 {
+  padding-left: 295px;
+  padding-right: 295px;
+}
+
 .pdy-8 {
   padding-top: 8px;
   padding-bottom: 8px;
+}
+
+.pdy-10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .pdy-16 {
@@ -268,6 +284,14 @@ h4 {
 .pdy-100 {
   padding-top: 100px;
   padding-bottom: 100px;
+}
+
+.pt-32 {
+  padding-top: 32px;
+}
+
+.pt-92 {
+  padding-top: 92px;
 }
 
 .pt-260 {
@@ -298,6 +322,10 @@ h4 {
   padding-bottom: 100px;
 }
 
+.pb-280 {
+  padding-bottom: 280px;
+}
+
 .mx-4 {
   margin-left: 4px;
   margin-right: 4px;
@@ -308,6 +336,16 @@ h4 {
   margin-right: 8px;
 }
 
+.mx-12 {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.mx-16 {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
 .mx-24 {
   margin-left: 24px;
   margin-right: 24px;
@@ -316,6 +354,11 @@ h4 {
 .mx--8 {
   margin-left: -8px;
   margin-right: -8px;
+}
+
+.mx--12 {
+  margin-left: -12px;
+  margin-right: -12px;
 }
 
 .mx--24 {
@@ -356,7 +399,19 @@ h4 {
   margin-bottom: 48px;
 }
 
+.mb-54 {
+  margin-bottom: 54px;
+}
+
 .mb-64 {
+  margin-bottom: 64px;
+}
+
+.mb-84 {
+  margin-bottom: 84px;
+}
+
+.mb-92 {
   margin-bottom: 64px;
 }
 
@@ -390,6 +445,12 @@ h4 {
 .btn-secondary:hover {
   color: #fff;
   background: #ff2e1d;
+}
+
+.btn-size {
+  width: 136px;
+  height: 49px;
+  margin: 0 auto 32px;
 }
 
 .pagination {
@@ -526,6 +587,92 @@ h4 {
   margin: 0px auto 100px;
 }
 
+.area-project .project {
+  width: 100%;
+}
+
+.area-project .project-selection {
+  width: 100%;
+}
+
+.area-project .project-selection .sel-simple {
+  width: 45%;
+}
+
+.area-project .project-selection .sel-simple h3 {
+  border-bottom: 1px solid #DDDDDD;
+}
+
+.area-project .project-selection .sel-standard {
+  width: 45%;
+}
+
+.area-project .project-selection .sel-standard h3 {
+  border-bottom: 1px solid #DDDDDD;
+}
+
+.area-project .project-selection .sel-information {
+  text-align: left;
+}
+
+.area-project .project-selection .sel-information li {
+  margin-bottom: 16px;
+}
+
+.sel-box {
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.sel-box .sel-num {
+  width: 45%;
+  background: #F5F5F5;
+}
+
+.sel-box .sel-num span {
+  color: #56C4C5;
+  font-size: 29px;
+}
+
+.sel-box .sel-num sub {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.sel-box .equal {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.sel-box .sel-price {
+  width: 45%;
+  background: #F5F5F5;
+}
+
+.sel-box .sel-price span {
+  font-size: 29px;
+}
+
+.sel-box .sel-price sub {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.area-qa .qa h4 {
+  font-size: 18px;
+  font-weight: normal;
+  width: 80%;
+}
+
+.area-qa .qa h4 span {
+  font-weight: bold;
+  color: #56C4C5;
+}
+
+.area-qa .select p {
+  color: #747474;
+}
+
 footer {
   background: #F5F5F5;
 }
@@ -539,6 +686,7 @@ footer .footer-box {
   body {
     background-size: 90vw auto,240px 240px,200px 200px;
     background-position: top right,-20vw 145vh,77vw 370vh;
+    z-index: -1;
   }
   .navbar {
     border-bottom: 2px solid #FFD153;
@@ -616,6 +764,24 @@ footer .footer-box {
   }
   .area-review .review .review-information {
     padding: 0px 32px;
+  }
+  .area-project {
+    margin-bottom: 60px;
+  }
+  .area-project .project-selection {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .area-project .project-selection .sel-simple {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  .area-project .project-selection .sel-standard {
+    background: #fff;
+    width: 100%;
+  }
+  .area-qa {
+    margin-bottom: 44px;
   }
 }
 
@@ -707,5 +873,23 @@ footer .footer-box {
   .area-bg h3 {
     font-size: 24px;
   }
+  .area-intro {
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/banner_sm.svg");
+    background-repeat: no-repeat;
+  }
+  .area-project .project {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .area-project .project a {
+    font-size: 16px;
+    padding: 8px 16px;
+    width: 105px;
+    height: 40px;
+    margin: 0 3px 6px;
+  }
 }
-/*# sourceMappingURL=all.css.map */
+/*# sourceMappingURL=page1.css.map */
