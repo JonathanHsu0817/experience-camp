@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* variable */
 /* css reset */
 html, body, div, span, applet, object, iframe,
@@ -50,18 +51,73 @@ table {
   border-spacing: 0;
 }
 
+sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
+
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-size: 16px;
+  font-family: Noto Sans TC, Regular;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 容器 */
+body {
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/bg_home.svg"), url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball01.svg"), url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball02.svg");
+  background-repeat: no-repeat;
+  background-size: 60vw auto,360px 360px,310px 310px;
+  background-position: top right,-20vw 70vh,78vw 200vh;
+  z-index: -1;
 }
 
 .container {
   max-width: 1088px;
   margin: 0 auto;
+  padding: 0px 20px;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo a {
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/logo.png);
+  background-size: 218px 40px;
+  background-repeat: no-repeat;
+  width: 218px;
+  height: 40px;
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+}
+
+.banner-l {
+  width: 50%;
+}
+
+.banner-r {
+  width: 50%;
 }
 
 .box-radius {
   border-radius: 5px;
+  overflow: hidden;
 }
 
 .box-round {
@@ -69,49 +125,587 @@ table {
 }
 
 .box-shadow {
-  -webkit-box-shadow: 0px 0px 5px gray;
-          box-shadow: 0px 0px 5px gray;
+  -webkit-box-shadow: 0px 2px 5px #c3c3c3;
+          box-shadow: 0px 2px 5px #c3c3c3;
 }
 
-mb-1 {
+.card {
+  display: block;
+}
+
+/* 元件 */
+h2 {
+  font-size: 48px;
+  font-family: Noto Sans TC, Bold;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 32px;
+  font-family: Noto Sans TC, Bold;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 24px;
+  font-family: Noto Sans TC, Bold;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 18px;
+}
+
+.banner .title {
+  color: #56C4C5;
+  font-weight: bold;
+  padding-top: 50px;
+}
+
+.df {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.df-jcc {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.df-jcfs {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.df-jcsb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.df-aic {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.df-aife {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.fxdc {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.fxww {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.ta-c {
+  text-align: center;
+}
+
+.pdx-8 {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.pdx-16 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.pdx-24 {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.pdx-32 {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.pdx-63 {
+  padding-left: 63px;
+  padding-right: 63px;
+}
+
+.pdx-139 {
+  padding-left: 139px;
+  padding-right: 139px;
+}
+
+.pdy-8 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.pdy-16 {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.pdy-24 {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.pdy-32 {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.pdy-100 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.pt-260 {
+  padding-top: 260px;
+}
+
+.pb-8 {
+  padding-bottom: 8px;
+}
+
+.pb-16 {
+  padding-bottom: 16px;
+}
+
+.pb-24 {
+  padding-bottom: 24px;
+}
+
+.pb-30 {
+  padding-bottom: 30px;
+}
+
+.pb-48 {
+  padding-bottom: 48px;
+}
+
+.pb-100 {
+  padding-bottom: 100px;
+}
+
+.mx-4 {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.mx-8 {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.mx-24 {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.mx--8 {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.mx--24 {
+  margin-left: -24px;
+  margin-right: -24px;
+}
+
+.mx--48 {
+  margin-left: -48px;
+  margin-right: -48px;
+}
+
+.mxr-47 {
+  margin-right: 47px;
+}
+
+.mb-8 {
   margin-bottom: 8px;
 }
 
-mb-2 {
+.mb-16 {
   margin-bottom: 16px;
 }
 
-mb-3 {
+.mb-24 {
   margin-bottom: 24px;
 }
 
-mb-4 {
+.mb-28 {
+  margin-bottom: 28px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mb-48 {
   margin-bottom: 48px;
+}
+
+.mb-64 {
+  margin-bottom: 64px;
+}
+
+.mb-100 {
+  margin-bottom: 100px;
 }
 
 .btn {
   display: block;
-  border-radius: 5%;
+  border-radius: 20px;
   text-decoration: none;
+  text-align: center;
+  padding: 12px 32px;
 }
 
 .btn-primary {
-  color: #56C4C5;
-  border: 1px solid #56C4C5;
-}
-
-.btn-primary:hover {
   color: #fff;
   background: #56C4C5;
 }
 
+.btn-primary:hover {
+  color: #fff;
+  background: #3bacad;
+}
+
 .btn-secondary {
-  color: #FF5D50;
-  border: 1px solid #FF5D50;
+  color: #fff;
+  background: #FF5D50;
 }
 
 .btn-secondary:hover {
   color: #fff;
-  background: #FF5D50;
+  background: #ff2e1d;
+}
+
+.pagination {
+  display: block;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+.pagination-primary {
+  width: 16px;
+  height: 10px;
+  background: #FFD153;
+}
+
+.pagination-secondary {
+  width: 10px;
+  height: 10px;
+  background: #DDDDDD;
+}
+
+.platform-card {
+  width: 33%;
+}
+
+.platform-card img {
+  width: 36%;
+}
+
+.platform-card p {
+  color: #747474;
+}
+
+.area-role .title {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.area-role .role-card {
+  width: 25%;
+  background-color: #fff;
+}
+
+.area-role .role-card img {
+  width: 100%;
+}
+
+.area-role .role-card h4 {
+  color: #56C4C5;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.area-advantage .advantage {
+  width: 49%;
+}
+
+.area-advantage .advantage-information {
+  width: 50%;
+}
+
+.area-advantage .advantage-information h3 {
+  padding-top: 165px;
+  padding-right: 100px;
+  padding-bottom: 16px;
+}
+
+.area-advantage .advantage-information p {
+  padding-bottom: 24px;
+}
+
+.area-advantage .advantage-information a {
+  margin-right: 228px;
+}
+
+.advantage-card {
+  width: 45%;
+}
+
+.advantage-card .item {
+  width: 86px;
+  height: 86px;
+}
+
+.advantage-card .item img {
+  width: 52px;
+  height: 52px;
+}
+
+.review-card {
+  width: 33%;
+  position: relative;
+}
+
+.review-card .review-pic {
+  position: absolute;
+  left: 32px;
+}
+
+.review-card .review-pic img {
+  width: 80px;
+  height: 80px;
+}
+
+.review-card .review-information {
+  width: 100%;
+  margin-top: 56px;
+}
+
+.review-card .review-information .pg {
+  margin-top: 48px;
+  border-bottom: 1px solid #DDDDDD;
+  line-height: 1.3;
+}
+
+.review-card .review-information h4 {
+  padding-top: 24px;
+  font-size: 16px;
+}
+
+.review-card .review-information .star-rate img {
+  width: 90%;
+  height: 90%;
+}
+
+.area-bg {
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/home_footer.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+.area-bg a {
+  width: 136px;
+  margin: 0px auto 100px;
+}
+
+footer {
+  background: #F5F5F5;
+}
+
+footer .footer-box {
+  padding: 16px 0px;
+}
+
+/* 斷點 */
+@media (max-width: 768px) {
+  body {
+    background-size: 90vw auto,240px 240px,200px 200px;
+    background-position: top right,-20vw 145vh,77vw 370vh;
+  }
+  .navbar {
+    border-bottom: 2px solid #FFD153;
+  }
+  .banner {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .banner .banner-l {
+    width: 100%;
+  }
+  .banner .banner-r {
+    width: 100%;
+  }
+  .platform {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 -48px;
+  }
+  .platform .platform-card {
+    width: 100%;
+    padding: 0px 48px;
+  }
+  .platform .platform-card img {
+    width: 30%;
+  }
+  .area-role {
+    margin-bottom: 60px;
+  }
+  .area-role .role {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .area-role .role .role-card {
+    width: 46%;
+    margin-bottom: 16px;
+  }
+  .area-advantage {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 36px;
+  }
+  .area-advantage .advantage {
+    width: 100%;
+    margin: 0px -12px;
+  }
+  .area-advantage .advantage .advantage-card {
+    margin: 0px 12px 24px;
+  }
+  .area-advantage .advantage-information {
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .area-advantage .advantage-information h3 {
+    padding: 0 0 16px;
+  }
+  .area-advantage .advantage-information a {
+    margin: 0 0 32px;
+  }
+  .area-review .review {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .area-review .review .review-card {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  .area-review .review .review-information {
+    padding: 0px 32px;
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    background-image: none;
+  }
+  h3 {
+    font-size: 28px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 16px;
+  }
+  .container {
+    padding: 0px 20px;
+  }
+  .navbar {
+    padding: 16px 20px;
+    border-bottom: 2px solid #FFD153;
+  }
+  .logo a {
+    background-size: 131px 24px;
+    width: 131px;
+    height: 24px;
+  }
+  .banner {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .banner .banner-l {
+    width: 100%;
+  }
+  .banner .banner-l h2 {
+    font-size: 32px;
+  }
+  .banner .banner-l p {
+    font-size: 16px;
+  }
+  .banner .banner-r {
+    width: 100%;
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/bg_home_sm.svg");
+    background-repeat: no-repeat;
+    background-size: 80vw;
+    background-position: 0 12vh;
+  }
+  .area-platform {
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball01.svg");
+    background-repeat: no-repeat;
+    background-size: 126px 126px;
+    background-position: -87px 10px;
+  }
+  .area-platform .platform {
+    margin: 0 -64px;
+  }
+  .area-platform .platform .platform-card {
+    padding: 0px 64px;
+  }
+  .area-platform .platform .platform-card img {
+    width: 24%;
+  }
+  .area-role {
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball02.svg");
+    background-repeat: no-repeat;
+    background-size: 140px 140px;
+    background-position: 78vw 225vh;
+  }
+  .area-role .title {
+    font-size: 18px;
+  }
+  .area-role .role {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 -24px;
+  }
+  .area-role .role .role-card {
+    margin: 0px 24px;
+    width: 80%;
+    margin-bottom: 24px;
+  }
+  .area-advantage .advantage .advantage-card {
+    width: 100%;
+  }
+  .area-bg {
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/footer_sm.svg");
+  }
+  .area-bg h3 {
+    font-size: 24px;
+  }
 }
 /*# sourceMappingURL=all.css.map */
